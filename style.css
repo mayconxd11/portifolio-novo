@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    color: #1e1e2a;
+}
+
+/* -- HEADER -- */
+
+.header-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #99a3fe;
+    background-image: url(assets/img/eu\ mesmo\,\ atual.jpeg);
+    background-repeat: no-repeat;
+    background-position:right;
+    background-position-x: 17cm;
+    background-size: contain ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 112px;
+    position: relative;
+}
+h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+h2{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.social-media{
+    margin-top: 1rem;
+    display: flex;
+}
+.social-media a {
+    text-decoration: none;
+    color: #1a1a1b;
+    padding: 1rem 4rem;
+    border: 1px solid #1a1a1b;
+    min-width: 4 rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+a:hover{
+    background-color: #d3d3da;
+}
+
+/* Menu estilo hamburguer*/
+.checkbox-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkbox{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400 ms ease-in-out 0s;
+}
+.checkbox .trace{
+    width: 50px;
+    height: 2px;
+    background-color: #1e1e2a;
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5 ease-in-out;
+}
+.checkbox .trace:nth-child(1) {
+    top:26px;
+    transform: rotate(0);
+}
+.checkbox .trace:nth-child(2){
+    top: 46px;
+    transform: rotate(0);
+}
+.checkbox .trace:nth-child(3){
+    top: 6px;
+    transform: rotate(0);
+}

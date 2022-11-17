@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family= Poppins & display = swap');
 body{
     margin: 0;
     padding: 0;
@@ -55,6 +54,8 @@ a:hover{
 }
 
 /* Menu estilo hamburguer*/
+
+
 .checkbox-container {
     display:flex;
     justify-content: center;
@@ -89,6 +90,40 @@ a:hover{
     transform: rotate(0);
 }
 .checkbox .trace:nth-child(3){
-    top: 6px;
+    top: 66px;
     transform: rotate(0);
+}
+
+#toggle{
+    display: none;
+}
+
+/* MENU */
+
+.menu{
+    position: absolute;
+    top: 28px;
+    right:30px;
+    background-color: transparent;
+    height: 4px;
+    width: 10px;
+    box-shadow: 0px 0px 0px 0px #ffffff;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+}
+
+
+.menu-items {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ z-index: 2;
+ opacity: 0;
+ visibility: hidden;
+ transition: 400ms ease-in-out 0s;
 }

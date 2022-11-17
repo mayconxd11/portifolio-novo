@@ -12,7 +12,7 @@ body{
     height: 100vh;
     width: 100vw;
     background-color: #99a3fe;
-    background-image: url(assets/img/eu\ mesmo\,\ atual.jpeg);
+    background-image: url(assets/img/1668714188510-removebg-preview.png);
     background-repeat: no-repeat;
     background-position:right;
     background-position-x: 17cm;
@@ -107,12 +107,11 @@ a:hover{
     background-color: transparent;
     height: 4px;
     width: 10px;
+    border-radius: 50%;
     box-shadow: 0px 0px 0px 0px #ffffff;
     z-index: -1;
-    transition: 400ms ease-in-out 0s;
+    transition: 500ms ease-in-out 0s;
 }
-
-
 .menu-items {
  position: fixed;
  top: 0;
@@ -125,5 +124,133 @@ a:hover{
  z-index: 2;
  opacity: 0;
  visibility: hidden;
- transition: 400ms ease-in-out 0s;
+ transition: 500ms ease-in-out 0s;
+}
+
+.menu-items ul {
+    list-style-type: none;
+}
+.menu-items ul li a {
+    margin:  10px 0;
+    color: #1e1e2a;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+
+/* ANIMAÇÃO DO MENU! */
+
+#toggle:checked +.checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    top: 47px;
+} 
+#toggle:checked +.checkbox .trace:nth-child(2) {
+    transform: translate(-200px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+#toggle:checked +.checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 45px;
+}
+#toggle:checked +.checkbox{
+    background-color: #bdc3f7;
+    
+}
+#toggle:checked ~ .menu{
+    box-shadow: 0px 5px 10px 95vmax #bdc3f7;;
+    z-index: 1;
+}
+#toggle:checked ~ .menu-items{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* CARDS */
+
+.container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+}
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+}
+.card{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin: 3rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(10, 114, 90);
+    background-image: url(/assets/img/Eu\ cabelo\ grande.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(0.5);
+    color: #303053;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.card-text{
+    width: 30%;
+    letter-spacing: 1px;
+    color: rgb(109, 109, 109);
+}
+.card-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.card-wrapper::before{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: 0.5 ease-in-out;
+}
+.card-wrapper h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.5 ease-in-out;
+}
+.card-wrapper p {
+    font-size: 0;
+    visibility: visible;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+}
+.card:hover{
+    filter: unset;
+}
+.card:hover > .card-wrapper::before{
+    height: 200px;
+    width: 200px;
+    opacity: 1;
+}
+.card:hover > .card-wrapper p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
 }
